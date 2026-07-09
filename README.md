@@ -1,80 +1,211 @@
-# Shawn Calvin Snelling - AXEZENT AI OPAC-018 Green-Schur Bridge
+# Shawn Calvin Snelling — AXEZENT AI OPAC-018 Green-Schur Bridge
 
-**External-review package v2.1.0**
+> **External-Review Research Package • Version 2.1.0**
 
-Author: Shawn Calvin Snelling  
-Research label: AXEZENT AI Research Lab  
-Status: **SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING**
+**Author:** Shawn Calvin Snelling  
+**Research Lab:** AXEZENT AI Research Lab
 
-This repository is a reviewer-facing OPAC-018 research package. It studies the root-polytope projection bound
+---
 
-```text
-kappa(Phi, U) < 2
+## Project Status
+
+**Current Status**
+
+- Solution Candidate
+- External Review Pending
+- Continuous Integration Enabled
+- Exact Rational Verification Included
+
+This repository contains the complete external-review package for the OPAC-018 Green-Schur Bridge research project.
+
+The project combines:
+
+- Mathematical manuscript
+- Exact arithmetic verification
+- Worked examples
+- Reproducibility receipts
+- Automated testing
+- GitHub Actions continuous integration
+- Reviewer documentation
+
+---
+
+# Research Scope
+
+This repository investigates the root-polytope projection bound
+
+```
+κ(Φ,U) < 2
 ```
 
-through exact rational audits, documented block formulas, negative controls, reproducibility receipts, and reviewer-facing mathematical risk notes.
+using:
 
-## What this package is
+- Green-Schur techniques
+- Exact rational arithmetic
+- Classification-aware reductions
+- Deterministic verification
+- Reproducibility-first engineering
 
-This is a **manuscript and consistency-check suite** prepared for external mathematical review. The code checks the formulas and bounds that are encoded in the repository using exact arithmetic. The package is designed to make the proof structure, assumptions, and remaining audit questions visible to reviewers.
+---
 
-## What this package is not
+# Repository Purpose
 
-This package is not a substitute for independent peer review. It does not claim journal acceptance, referee acceptance, arXiv endorsement, or resolution of unrelated mathematical problems.
+This repository is intended for:
 
-## Start here
+- Independent mathematical review
+- Verification of encoded formulas
+- Reproducibility
+- Documentation
+- Long-term archival
+- Research collaboration
 
-For a fast review path, open:
+---
 
-```text
+# Truth Boundary
+
+This repository presents a **solution candidate**.
+
+It does **not** claim:
+
+- Journal acceptance
+- Referee acceptance
+- arXiv endorsement
+- Resolution of unrelated mathematical problems
+- Independent verification has already occurred
+
+Independent mathematical review remains an essential next step.
+
+---
+
+# Quick Start
+
+## Fast reviewer path
+
+Read these files first:
+
+```
 START_REVIEW_HERE.md
 ```
 
-For the complete reviewer path, read:
+---
 
-```text
+## Complete reviewer path
+
+```
 START_HERE.md
+
 CLAIMS_AND_NONCLAIMS.md
+
 DEPENDENCY_TABLE.md
+
 docs/LITERATURE_COMPARISON.md
+
 examples/example_A5.md
+
 examples/example_C6.md
+
 examples/example_D5.md
+
 paper/main.tex
 ```
 
-## Run locally
+---
+
+# Running the Verification Suite
 
 ```bash
 python -m compileall -q .
+
 python pure_python_exact_audit.py
+
 python counterexample_stress_test.py
+
 python verify_all.py
-pytest -q
-python verify_manifest.py
-python build_sha_manifest.py --check
+
+python -m pytest tests/ -q
 ```
 
-Expected high-level status:
+---
 
-```json
-{"passed": true, "failures": []}
+# Repository Structure
+
+| Folder | Purpose |
+|---------|----------|
+| assets | Figures and diagrams |
+| csl | Exact rational verification engine |
+| docs | Reviewer documentation |
+| examples | Hand-worked examples |
+| paper | Manuscript and PDF |
+| receipts | Verification receipts |
+| sage | SageMath verification |
+| tests | Automated regression tests |
+
+---
+
+# Core Programs
+
+| File | Purpose |
+|------|----------|
+| verify_all.py | Master verification runner |
+| pure_python_exact_audit.py | Exact arithmetic audit |
+| counterexample_stress_test.py | Negative-control verification |
+| csl/opac_engine.py | Projection verification engine |
+
+---
+
+# Release Information
+
+Current Release:
+
+**v2.1.0**
+
+Release Type:
+
+**External Review Package**
+
+---
+
+# Citation
+
+Please see
+
+```
+CITATION.cff
 ```
 
-## Core files
+for citation information.
 
-| File or folder | Purpose |
-|---|---|
-| `csl/opac_engine.py` | Exact rational formula and envelope checker. |
-| `pure_python_exact_audit.py` | Deterministic formula audit receipt generator. |
-| `counterexample_stress_test.py` | Negative-control and malformed-claim rejection checks. |
-| `verify_all.py` | Master local orchestration runner. |
-| `tests/` | Pytest regression tests for formulas, receipts, examples, and boundaries. |
-| `examples/` | Hand-checkable Type A, Type C, and Type D examples. |
-| `docs/` | Review notes, dependency map, literature comparison, and risk ledger. |
-| `paper/` | Manuscript source and review PDF. |
-| `receipts/` | Deterministic JSON receipts and SHA-256 manifest. |
+---
 
-## Safe public wording
+# License
 
-> Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge v2.1.0 is an external-review research package containing a solution-candidate manuscript, exact-arithmetic consistency checks, negative controls, reproducibility receipts, and reviewer navigation materials. Independent mathematical review remains pending.
+This project is released under the MIT License.
+
+See
+
+```
+LICENSE
+```
+
+---
+
+# Repository Highlights
+
+- Exact Rational Arithmetic
+- Continuous Integration
+- Deterministic Verification
+- Worked Mathematical Examples
+- Reproducibility Receipts
+- Reviewer Navigation
+- External Review Package
+- Versioned Releases
+
+---
+
+# Safe Public Description
+
+Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge is an external-review research package containing a solution-candidate manuscript, exact-arithmetic verification tools, reproducibility receipts, reviewer documentation, and supporting software. Independent mathematical review remains pending.
+
+---
+
+© 2026 Shawn Calvin Snelling • AXEZENT AI Research Lab
