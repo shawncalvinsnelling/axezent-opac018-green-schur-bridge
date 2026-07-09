@@ -1,0 +1,60 @@
+name: Documentation improvement
+description: Report unclear documentation, typos, broken links, or missing reviewer guidance.
+title: "Docs: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the OPAC-018 Green-Schur Bridge documentation.
+
+        Use this template for README issues, broken links, unclear reviewer guidance, typos, or documentation structure improvements.
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which file or section needs improvement?
+      placeholder: "Example: README.md, START_REVIEW_HERE.md, docs/LITERATURE_COMPARISON.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Documentation issue type
+      options:
+        - Typo or wording
+        - Broken link
+        - Missing explanation
+        - Confusing structure
+        - Outdated information
+        - Formatting problem
+        - Other documentation issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: Current problem
+      description: What is unclear, incorrect, missing, outdated, or broken?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_change
+    attributes:
+      label: Suggested change
+      description: Optional. Paste suggested wording or describe the improvement.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: truth_boundary
+    attributes:
+      label: Truth-boundary acknowledgement
+      options:
+        - label: I understand this repository is marked SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING.
+          required: true
