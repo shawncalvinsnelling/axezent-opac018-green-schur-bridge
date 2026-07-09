@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<style>.bg{fill:#0f172a}.axis{stroke:#cbd5e1;stroke-width:3}.bar{fill:#38bdf8}.bar2{fill:#34d399}.t{fill:#f8fafc;font:700 32px Arial}.s{fill:#cbd5e1;font:400 20px Arial}.line{stroke:#ef4444;stroke-width:4;stroke-dasharray:10 8}</style>
+<rect class="bg" width="1200" height="700"/><text class="t" x="70" y="70">Strict Margin Samples: κ stays below 2 in audited cases</text>
+<line class="axis" x1="100" y1="580" x2="1100" y2="580"/><line class="axis" x1="100" y1="580" x2="100" y2="120"/>
+<line class="line" x1="100" y1="150" x2="1100" y2="150"/><text class="s" x="1010" y="140">κ = 2 boundary</text>
+<rect class="bar" x="180" y="310" width="70" height="270"/><rect class="bar" x="300" y="250" width="70" height="330"/><rect class="bar" x="420" y="220" width="70" height="360"/><rect class="bar2" x="600" y="360" width="70" height="220"/><rect class="bar2" x="720" y="300" width="70" height="280"/><rect class="bar2" x="840" y="255" width="70" height="325"/>
+<text class="s" x="170" y="620">C b=3</text><text class="s" x="290" y="620">C b=5</text><text class="s" x="410" y="620">C b=8</text><text class="s" x="580" y="620">A 2,2</text><text class="s" x="700" y="620">A 3,4</text><text class="s" x="825" y="620">A 7,8</text>
+</svg>

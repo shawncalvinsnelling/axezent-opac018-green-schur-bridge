@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OPAC-018 Green-Schur Bridge - AXEZENT AI v2.1.0</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header>
+  <div class="tag">SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING</div>
+  <h1>OPAC-018 Green-Schur Bridge</h1>
+  <p>External-review package v2.1.0 for Shawn Calvin Snelling / AXEZENT AI.</p>
+</header>
+<main>
+  <section class="grid">
+    <div class="card"><h2>Claim boundary</h2><p>The package studies <strong>kappa(Phi,U) &lt; 2</strong> through exact rational formulas and reviewable proof-candidate structure.</p></div>
+    <div class="card"><h2>Exact audits</h2><p>Python checks use rational arithmetic and integer cross-products. No proof-critical float comparisons.</p></div>
+    <div class="card warn"><h2>Review status</h2><p>This is not labeled journal accepted. External mathematical review remains pending.</p></div>
+  </section>
+
+  <h2>Review entry points</h2>
+  <ul>
+    <li><a href="START_REVIEW_HERE.md">Start Review Here</a></li>
+    <li><a href="DEPENDENCY_TABLE.md">Dependency Table</a></li>
+    <li><a href="docs/LITERATURE_COMPARISON.md">Literature Comparison</a></li>
+    <li><a href="examples/example_A5.md">Type A5 Worked Example</a></li>
+    <li><a href="examples/example_C6.md">Type C6 Worked Example</a></li>
+    <li><a href="examples/example_D5.md">Type D5 Worked Example</a></li>
+  </ul>
+
+  <h2>Bridge diagram</h2>
+  <img src="assets/opac_bridge_diagram.svg" alt="OPAC Green-Schur Bridge diagram">
+
+  <h2>Audit pipeline</h2>
+  <img src="assets/audit_pipeline.svg" alt="Audit pipeline diagram">
+
+  <h2>Risk matrix</h2>
+  <img src="assets/risk_matrix.svg" alt="Proof risk matrix">
+
+  <h2>Run the audit</h2>
+  <pre>python -m compileall -q .
+python pure_python_exact_audit.py
+python counterexample_stress_test.py
+python verify_all.py
+pytest -q
+python verify_manifest.py
+python build_sha_manifest.py --check</pre>
+</main>
+<footer>Shawn Calvin Snelling / AXEZENT AI Research Lab - OPAC-018 Green-Schur Bridge v2.1.0</footer>
+</body>
+</html>

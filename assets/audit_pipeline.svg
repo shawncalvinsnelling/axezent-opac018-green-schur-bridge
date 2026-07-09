@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<style>.bg{fill:#0f172a}.box{fill:#111827;stroke:#22c55e;stroke-width:3}.t{fill:#f8fafc;font:700 32px Arial}.s{fill:#cbd5e1;font:400 21px Arial}.a{stroke:#60a5fa;stroke-width:5;marker-end:url(#m)}</style>
+<defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#60a5fa"/></marker></defs>
+<rect class="bg" width="1400" height="760"/><text class="t" x="70" y="75">Referee Audit Pipeline</text>
+<g transform="translate(70,160)">
+<rect class="box" width="210" height="120" rx="18"/><text class="t" x="28" y="55">Claim</text><text class="s" x="28" y="90">bounded scope</text>
+<line class="a" x1="220" y1="60" x2="295" y2="60"/>
+<rect class="box" x="310" width="210" height="120" rx="18"/><text class="t" x="338" y="55">Audit</text><text class="s" x="338" y="90">exact arithmetic</text>
+<line class="a" x1="530" y1="60" x2="605" y2="60"/>
+<rect class="box" x="620" width="210" height="120" rx="18"/><text class="t" x="648" y="55">Stress</text><text class="s" x="648" y="90">negative controls</text>
+<line class="a" x1="840" y1="60" x2="915" y2="60"/>
+<rect class="box" x="930" width="210" height="120" rx="18"/><text class="t" x="958" y="55">Receipt</text><text class="s" x="958" y="90">JSON + SHA</text>
+<line class="a" x1="1150" y1="60" x2="1225" y2="60"/>
+<rect class="box" x="1240" width="140" height="120" rx="18"/><text class="t" x="1268" y="55">CI</text><text class="s" x="1268" y="90">green</text>
+</g>
+</svg>

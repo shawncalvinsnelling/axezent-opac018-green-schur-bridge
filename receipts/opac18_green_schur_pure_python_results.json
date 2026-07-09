@@ -1,0 +1,303 @@
+{
+  "arithmetic": "Fraction and integer cross-product only; no proof-critical floats",
+  "cases": [
+    {
+      "b1": 2,
+      "family": "C_single_block",
+      "kappa": "1/1",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 3,
+      "family": "C_single_block",
+      "kappa": "4/3",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 4,
+      "family": "C_single_block",
+      "kappa": "3/2",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 5,
+      "family": "C_single_block",
+      "kappa": "8/5",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 6,
+      "family": "C_single_block",
+      "kappa": "5/3",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 7,
+      "family": "C_single_block",
+      "kappa": "12/7",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 8,
+      "family": "C_single_block",
+      "kappa": "7/4",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 9,
+      "family": "C_single_block",
+      "kappa": "16/9",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 10,
+      "family": "C_single_block",
+      "kappa": "9/5",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 11,
+      "family": "C_single_block",
+      "kappa": "20/11",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 12,
+      "family": "C_single_block",
+      "kappa": "11/6",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 13,
+      "family": "C_single_block",
+      "kappa": "24/13",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 14,
+      "family": "C_single_block",
+      "kappa": "13/7",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 15,
+      "family": "C_single_block",
+      "kappa": "28/15",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 16,
+      "family": "C_single_block",
+      "kappa": "15/8",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 17,
+      "family": "C_single_block",
+      "kappa": "32/17",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 2,
+      "b2": 2,
+      "family": "A_two_block",
+      "kappa": "1/1",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 2,
+      "b2": 3,
+      "family": "A_two_block",
+      "kappa": "7/6",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 2,
+      "b2": 4,
+      "family": "A_two_block",
+      "kappa": "5/4",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 2,
+      "b2": 5,
+      "family": "A_two_block",
+      "kappa": "13/10",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 3,
+      "b2": 3,
+      "family": "A_two_block",
+      "kappa": "4/3",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 3,
+      "b2": 4,
+      "family": "A_two_block",
+      "kappa": "17/12",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 3,
+      "b2": 5,
+      "family": "A_two_block",
+      "kappa": "22/15",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 3,
+      "b2": 6,
+      "family": "A_two_block",
+      "kappa": "3/2",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 4,
+      "b2": 4,
+      "family": "A_two_block",
+      "kappa": "3/2",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 4,
+      "b2": 5,
+      "family": "A_two_block",
+      "kappa": "31/20",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 4,
+      "b2": 6,
+      "family": "A_two_block",
+      "kappa": "19/12",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 5,
+      "b2": 5,
+      "family": "A_two_block",
+      "kappa": "8/5",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 5,
+      "b2": 6,
+      "family": "A_two_block",
+      "kappa": "49/30",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 6,
+      "b2": 6,
+      "family": "A_two_block",
+      "kappa": "5/3",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 7,
+      "b2": 8,
+      "family": "A_two_block",
+      "kappa": "97/56",
+      "strict_lt_2": true
+    },
+    {
+      "b1": 9,
+      "b2": 10,
+      "family": "A_two_block",
+      "kappa": "161/90",
+      "strict_lt_2": true
+    }
+  ],
+  "envelope_results": [
+    {
+      "components_audited": [
+        3,
+        3
+      ],
+      "family": "Type-A_5",
+      "formula_mode": "A_two_block",
+      "kappa_float_for_display_only": 1.3333333333333333,
+      "kappa_rational": "4/3",
+      "margin_to_2_rational": "2/3",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-A_5",
+      "formula_mode": "A_identity_or_single_component",
+      "kappa_float_for_display_only": 1.0,
+      "kappa_rational": "1/1",
+      "margin_to_2_rational": "1/1",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-B_4",
+      "formula_mode": "B_single_block_envelope",
+      "kappa_float_for_display_only": 1.5,
+      "kappa_rational": "3/2",
+      "margin_to_2_rational": "1/2",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-C_6",
+      "formula_mode": "C_single_block_envelope",
+      "kappa_float_for_display_only": 1.5,
+      "kappa_rational": "3/2",
+      "margin_to_2_rational": "1/2",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-D_5",
+      "formula_mode": "D_single_block_envelope",
+      "kappa_float_for_display_only": 1.5,
+      "kappa_rational": "3/2",
+      "margin_to_2_rational": "1/2",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        3
+      ],
+      "reason": "Family E6 is outside the encoded classical audit scope.",
+      "status": "UNKNOWN",
+      "truth_label": "UNSUPPORTED_FAMILY_REVIEW_REQUIRED"
+    }
+  ],
+  "failures": [],
+  "package": "Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge External-Review Package",
+  "passed": true,
+  "receipt_mode": "deterministic",
+  "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+  "total_envelope_cases": 6,
+  "total_formula_cases": 32,
+  "truth_label": "SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING",
+  "version": "v2.1.0"
+}

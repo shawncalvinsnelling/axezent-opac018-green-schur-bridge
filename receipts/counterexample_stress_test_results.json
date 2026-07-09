@@ -1,0 +1,46 @@
+{
+  "package": "Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge External-Review Package",
+  "passed": true,
+  "receipt_mode": "deterministic",
+  "results": [
+    {
+      "case": "equality_boundary",
+      "rejected": true
+    },
+    {
+      "case": "over_boundary",
+      "rejected": true
+    },
+    {
+      "case": "zero_denominator",
+      "rejected": true
+    },
+    {
+      "case": "negative_denominator",
+      "rejected": true
+    },
+    {
+      "case": "float_input_rejected",
+      "rejected": true
+    },
+    {
+      "case": "unsupported_family",
+      "rejected": true
+    },
+    {
+      "case": "missing_margin",
+      "rejected": true
+    },
+    {
+      "case": "malformed_transfer_claim",
+      "rejected": true
+    },
+    {
+      "case": "overclaiming_label",
+      "rejected": true
+    }
+  ],
+  "total_cases": 9,
+  "unexpected_acceptances": [],
+  "version": "v2.1.0"
+}

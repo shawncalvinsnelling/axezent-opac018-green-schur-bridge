@@ -1,0 +1,92 @@
+{
+  "deterministic_integrity_token": "c3264c4b63264ea4bf94bed0fdb8db0fb97895812d7b7d7bc6d7fc33cd2ce2b9",
+  "exact_audit_passed": true,
+  "failed_formula_checks": [],
+  "formula_checks": [
+    {
+      "components_audited": [
+        3,
+        3
+      ],
+      "family": "Type-A_5",
+      "formula_mode": "A_two_block",
+      "kappa_float_for_display_only": 1.3333333333333333,
+      "kappa_rational": "4/3",
+      "margin_to_2_rational": "2/3",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-A_5",
+      "formula_mode": "A_identity_or_single_component",
+      "kappa_float_for_display_only": 1.0,
+      "kappa_rational": "1/1",
+      "margin_to_2_rational": "1/1",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-B_4",
+      "formula_mode": "B_single_block_envelope",
+      "kappa_float_for_display_only": 1.5,
+      "kappa_rational": "3/2",
+      "margin_to_2_rational": "1/2",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-C_6",
+      "formula_mode": "C_single_block_envelope",
+      "kappa_float_for_display_only": 1.5,
+      "kappa_rational": "3/2",
+      "margin_to_2_rational": "1/2",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "family": "Type-D_5",
+      "formula_mode": "D_single_block_envelope",
+      "kappa_float_for_display_only": 1.5,
+      "kappa_rational": "3/2",
+      "margin_to_2_rational": "1/2",
+      "software_boundary": "Checks encoded formulas/envelopes; does not replace independent mathematical proof review.",
+      "status": "PASS",
+      "strict_opac018_bound_passed": true,
+      "truth_label": "BOUND_VERIFIED_FOR_ENCODED_INPUT"
+    },
+    {
+      "components_audited": [
+        4
+      ],
+      "reason": "Family E6 is outside the encoded classical audit scope.",
+      "status": "UNKNOWN",
+      "truth_label": "UNSUPPORTED_FAMILY_REVIEW_REQUIRED"
+    }
+  ],
+  "package": "Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge External-Review Package",
+  "passed": true,
+  "software_boundary": "Consistency and exact-arithmetic checks only; independent mathematical review remains required.",
+  "stress_audit_passed": true,
+  "truth_label": "SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING",
+  "version": "v2.1.0"
+}

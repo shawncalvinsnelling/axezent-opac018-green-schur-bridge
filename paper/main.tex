@@ -1,0 +1,77 @@
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\title{OPAC-018 Green-Schur Bridge: External-Review Package}
+\author{Shawn Calvin Snelling\\AXEZENT AI Research Lab}
+\date{v2.1.0}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This manuscript source accompanies an external-review research package for OPAC-018. The package studies the root-polytope projection bound $\kappa(\Phi,U)<2$ through documented rational formulas, exact arithmetic audits, negative controls, and explicit open audit items. It is not presented as an independently accepted theorem; external mathematical review remains pending.
+\end{abstract}
+
+\section{Truth Boundary}
+The repository label is
+\[
+\text{SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING}.
+\]
+The software verifies encoded formulas and conservative envelopes over exact rational arithmetic. It does not replace independent mathematical review of the reductions that produce those formulas.
+
+\section{Basic Setup}
+Let $\Phi$ be a finite classical root system in a Euclidean vector space. Let
+\[
+P_\Phi = \operatorname{conv}(\Phi)
+\]
+be the root polytope. For a root-spanned subspace $U$, let $\pi_U$ denote orthogonal projection and let $\Psi=\Phi \cap U$. The target containment is encoded by the gauge
+\[
+\gamma_\Psi(y)=\inf\{\lambda>0:y\in \lambda P_\Psi\}.
+\]
+The dilation factor is reviewed through
+\[
+\kappa(\Phi,U)=\max_{\alpha\in\Phi}\gamma_\Psi(\pi_U(\alpha)).
+\]
+
+\section{Representative Formulas Audited by the Package}
+For Type A two-block configurations with finite block sizes $b_1,b_2\geq 2$, the encoded formula is
+\[
+\kappa_A(b_1,b_2)=2-\frac{1}{b_1}-\frac{1}{b_2}.
+\]
+For Type C single-block configurations with $b_1\geq 2$, the encoded envelope is
+\[
+\kappa_C(b_1)=\max\left(1,2-\frac{2}{b_1}\right).
+\]
+The software layer also includes conservative Type B and Type D encoded envelopes under the assumptions documented in the repository. Reviewers should inspect the Type B and Type D mathematical reductions separately.
+
+\section{Exact Arithmetic Audit Philosophy}
+All proof-critical comparisons use rational arithmetic. A comparison
+\[
+\frac{a}{b}<\frac{c}{d}
+\]
+with positive denominators is checked by the integer cross-product
+\[
+ad<cb.
+\]
+Floating-point values may be printed for display only, but they are not used in the boundary decision.
+
+\section{Reviewer Navigation}
+Start with \texttt{START\_REVIEW\_HERE.md}. Then inspect \texttt{DEPENDENCY\_TABLE.md}, \texttt{docs/FORMAL\_ASSUMPTIONS.md}, the worked examples in \texttt{examples/}, and this manuscript source. The strongest review should verify the gauge identity scope, signed-graph structural coverage, Type B and Type D case split, and exceptional-family exclusion boundary.
+
+\section{Reproducibility Commands}
+\begin{verbatim}
+python -m compileall -q .
+python pure_python_exact_audit.py
+python counterexample_stress_test.py
+python verify_all.py
+pytest -q
+python verify_manifest.py
+python build_sha_manifest.py --check
+\end{verbatim}
+
+\section{Conclusion}
+This release packages the Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge work as a review-ready solution-candidate repository with deterministic exact-audit infrastructure. Independent mathematical validation remains the required next step before any final theorem-status claim.
+
+\end{document}

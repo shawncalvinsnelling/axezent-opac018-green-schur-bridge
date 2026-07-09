@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
+<style>.bg{fill:#0b1020}.grid{stroke:#334155;stroke-width:2}.t{fill:#f8fafc;font:700 32px Arial}.s{fill:#cbd5e1;font:400 20px Arial}.dot{fill:#f59e0b}.dot2{fill:#ef4444}.dot3{fill:#22c55e}</style>
+<rect class="bg" width="1100" height="700"/><text class="t" x="60" y="70">Proof Risk Matrix</text>
+<line class="grid" x1="160" y1="580" x2="980" y2="580"/><line class="grid" x1="160" y1="580" x2="160" y2="130"/>
+<text class="s" x="500" y="640">Review difficulty</text><text class="s" x="30" y="350" transform="rotate(-90 30,350)">Impact</text>
+<circle class="dot2" cx="820" cy="190" r="18"/><text class="s" x="845" y="198">Global bridge</text>
+<circle class="dot2" cx="760" cy="260" r="18"/><text class="s" x="785" y="268">Non-simply-laced</text>
+<circle class="dot" cx="640" cy="330" r="18"/><text class="s" x="665" y="338">Convex-hull transfer</text>
+<circle class="dot" cx="560" cy="400" r="18"/><text class="s" x="585" y="408">Oblique subspaces</text>
+<circle class="dot3" cx="310" cy="500" r="18"/><text class="s" x="335" y="508">Manifest receipts</text>
+</svg>

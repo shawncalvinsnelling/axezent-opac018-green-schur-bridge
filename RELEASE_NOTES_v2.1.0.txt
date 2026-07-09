@@ -1,0 +1,18 @@
+Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge
+External-review package v2.1.0
+
+This release rebuilds the repository as a cleaner external-review package.
+
+Added:
+- START_REVIEW_HERE.md with 5-minute, 15-minute, 1-hour, and full-review paths.
+- DEPENDENCY_TABLE.md and docs/DEPENDENCY_GRAPH.md.
+- docs/LITERATURE_COMPARISON.md and docs/FORMAL_ASSUMPTIONS.md.
+- Hand-checkable examples for Type A, Type C, and Type D.
+- csl/opac_engine.py exact rational checker.
+- verify_all.py master local audit runner.
+- Pytest coverage for formulas, examples, receipts, and boundaries.
+- Updated paper source and v2.1.0 review PDF.
+
+Truth boundary:
+- Status remains SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING.
+- The software verifies encoded formulas and bounds; it does not replace independent mathematical peer review.

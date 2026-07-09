@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "OPAC-018 Green-Schur Bridge External-Review Package"
+message: "If you use this repository, please cite it as below."
+type: software
+authors:
+  - family-names: Snelling
+    given-names: Shawn Calvin
+version: "2.1.0"
+date-released: "2026-07-09"
+abstract: "External-review research package by Shawn Calvin Snelling / AXEZENT AI for OPAC-018 Green-Schur Bridge consistency checks and manuscript review."

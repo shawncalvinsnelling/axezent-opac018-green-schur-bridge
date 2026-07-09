@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+<style>
+.bg{fill:#0b1020}.node{fill:#111827;stroke:#60a5fa;stroke-width:3}.node2{fill:#06281a;stroke:#34d399;stroke-width:3}.warn{fill:#2a1806;stroke:#f59e0b;stroke-width:3}
+.t{fill:#f8fafc;font:700 34px Arial}.s{fill:#cbd5e1;font:400 22px Arial}.arrow{stroke:#93c5fd;stroke-width:5;marker-end:url(#m)}
+</style>
+<defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker></defs>
+<rect class="bg" width="1400" height="760"/>
+<text x="55" y="70" class="t">OPAC-018 Green-Schur Bridge Map</text>
+<rect class="node" x="60" y="150" width="260" height="140" rx="20"/><text x="90" y="205" class="t">Root data</text><text x="90" y="245" class="s">Φ, U, Cartan blocks</text>
+<rect class="node" x="410" y="150" width="300" height="140" rx="20"/><text x="440" y="205" class="t">Green ratios</text><text x="440" y="245" class="s">exact rational margins</text>
+<rect class="node" x="800" y="150" width="300" height="140" rx="20"/><text x="830" y="205" class="t">Schur transfer</text><text x="830" y="245" class="s">bridge candidate</text>
+<rect class="node2" x="1140" y="150" width="220" height="140" rx="20"/><text x="1170" y="205" class="t">κ &lt; 2</text><text x="1170" y="245" class="s">target bound</text>
+<line class="arrow" x1="320" y1="220" x2="405" y2="220"/><line class="arrow" x1="710" y1="220" x2="795" y2="220"/><line class="arrow" x1="1100" y1="220" x2="1135" y2="220"/>
+<rect class="warn" x="160" y="430" width="1080" height="150" rx="24"/><text x="200" y="485" class="t">External review gate</text><text x="200" y="530" class="s">Global bridge, non-simply-laced normalization, convex-hull transfer, oblique subspaces</text>
+</svg>

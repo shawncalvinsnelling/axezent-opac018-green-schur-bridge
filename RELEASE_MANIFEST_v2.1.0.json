@@ -1,0 +1,18 @@
+{
+  "added_in_release": [
+    "START_REVIEW_HERE.md",
+    "DEPENDENCY_TABLE.md",
+    "docs/FORMAL_ASSUMPTIONS.md",
+    "docs/LITERATURE_COMPARISON.md",
+    "docs/DEPENDENCY_GRAPH.md",
+    "examples/",
+    "csl/opac_engine.py",
+    "verify_all.py",
+    "tests/"
+  ],
+  "created_for": "external mathematical review and reproducibility checking",
+  "package": "Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge",
+  "software_boundary": "The code verifies encoded formulas and envelopes; independent mathematical review remains required.",
+  "status": "SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING",
+  "version": "v2.1.0"
+}

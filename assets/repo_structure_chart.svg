@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<style>.bg{fill:#0b1020}.box{fill:#111827;stroke:#60a5fa;stroke-width:3}.t{fill:#f8fafc;font:700 32px Arial}.s{fill:#cbd5e1;font:400 21px Arial}</style>
+<rect class="bg" width="1200" height="760"/><text class="t" x="70" y="70">Repository Structure</text>
+<rect class="box" x="80" y="130" width="300" height="150" rx="20"/><text class="t" x="110" y="185">Root docs</text><text class="s" x="110" y="225">README, START_HERE</text><text class="s" x="110" y="255">Claims, roadmap</text>
+<rect class="box" x="450" y="130" width="300" height="150" rx="20"/><text class="t" x="480" y="185">Audits</text><text class="s" x="480" y="225">Python exact checks</text><text class="s" x="480" y="255">Stress tests</text>
+<rect class="box" x="820" y="130" width="300" height="150" rx="20"/><text class="t" x="850" y="185">Receipts</text><text class="s" x="850" y="225">JSON + SHA-256</text><text class="s" x="850" y="255">Manifest verifier</text>
+<rect class="box" x="80" y="360" width="300" height="150" rx="20"/><text class="t" x="110" y="415">Paper</text><text class="s" x="110" y="455">LaTeX source</text><text class="s" x="110" y="485">Review summary</text>
+<rect class="box" x="450" y="360" width="300" height="150" rx="20"/><text class="t" x="480" y="415">Website</text><text class="s" x="480" y="455">index.html</text><text class="s" x="480" y="485">SVG charts</text>
+<rect class="box" x="820" y="360" width="300" height="150" rx="20"/><text class="t" x="850" y="415">CI</text><text class="s" x="850" y="455">GitHub Actions</text><text class="s" x="850" y="485">green target</text>
+</svg>

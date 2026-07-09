@@ -1,0 +1,9 @@
+{
+  "checked": 68,
+  "mismatches": [],
+  "missing": [],
+  "package": "OPAC-018 Green-Schur Bridge Referee Package",
+  "passed": true,
+  "receipt_mode": "deterministic-excluded-from-manifest",
+  "version": "v2.1.0"
+}
