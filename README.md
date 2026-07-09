@@ -10,7 +10,7 @@
 
 **Author:** Shawn Calvin Snelling  
 **Research label:** AXEZENT AI Research Lab  
-**Current release:** [`v2.1.0`](https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.0)  
+**Current release:** [`v2.1.1`](https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.1)  
 **Status:** **SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING**
 
 ---
@@ -34,6 +34,8 @@ through a reviewer-facing package that combines:
 - deterministic receipts,
 - GitHub Actions continuous integration,
 - release packaging,
+- GitHub Pages reviewer navigation,
+- contribution and issue templates,
 - and documentation designed for independent mathematical review.
 
 This repository is intended to be the single public home for the OPAC-018 Green-Schur Bridge package.
@@ -66,12 +68,15 @@ It is not a substitute for independent mathematical review.
 - [Truth Boundary](#truth-boundary)
 - [Reviewer Quick Start](#reviewer-quick-start)
 - [Run the Verification Suite](#run-the-verification-suite)
+- [Optional Release-Integrity Checks](#optional-release-integrity-checks)
 - [Repository Structure](#repository-structure)
 - [Core Verification Programs](#core-verification-programs)
 - [Manuscript and Review Files](#manuscript-and-review-files)
 - [Examples](#examples)
+- [Documentation Highlights](#documentation-highlights)
 - [Receipts and Reproducibility](#receipts-and-reproducibility)
 - [Release Package](#release-package)
+- [Project Governance](#project-governance)
 - [Citation](#citation)
 - [License](#license)
 - [Suggested Public Description](#suggested-public-description)
@@ -135,13 +140,7 @@ python build_sha_manifest.py --check
 
 During the initial GitHub upload and CI setup, the workflow was simplified so the manifest check does not block CI while repository files are being finalized.
 
-The manifest should be regenerated before the next maintenance release.
-
-Planned maintenance target:
-
-```text
-v2.1.1 — repository polish and manifest refresh
-```
+The manifest should be regenerated before a future maintenance release that restores manifest verification into CI.
 
 ---
 
@@ -151,7 +150,7 @@ v2.1.1 — repository polish and manifest refresh
 |---|---|
 | [`assets/`](assets/) | Figures, diagrams, and visual documentation |
 | [`csl/`](csl/) | Exact rational OPAC verification engine |
-| [`docs/`](docs/) | Reviewer documentation, proof-risk notes, and literature comparison |
+| [`docs/`](docs/) | Reviewer documentation, proof-risk notes, GitHub Pages guide, and literature comparison |
 | [`examples/`](examples/) | Hand-checkable worked examples |
 | [`paper/`](paper/) | Manuscript source and review PDFs |
 | [`receipts/`](receipts/) | Deterministic JSON receipts and SHA-256 files |
@@ -212,6 +211,7 @@ v2.1.1 — repository polish and manifest refresh
 | [`docs/KNOWN_FAILURE_MODES.md`](docs/KNOWN_FAILURE_MODES.md) | Known failure modes and boundaries |
 | [`docs/VISUAL_ASSET_GUIDE.md`](docs/VISUAL_ASSET_GUIDE.md) | Visual asset guide |
 | [`docs/ZERO_FLOAT_INTEGER_CROSS_PRODUCT_RULE.md`](docs/ZERO_FLOAT_INTEGER_CROSS_PRODUCT_RULE.md) | Zero-float verification rule |
+| [`docs/GITHUB_PAGES_SETUP.md`](docs/GITHUB_PAGES_SETUP.md) | GitHub Pages setup guide |
 
 ---
 
@@ -240,26 +240,49 @@ Important files include:
 Latest release:
 
 ```text
-v2.1.0
+v2.1.1
 ```
 
-Release page:
+Latest release page:
+
+```text
+https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.1
+```
+
+The original v2.1.0 external-review root-upload archive remains available on the v2.1.0 release page:
 
 ```text
 https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.0
 ```
 
-Primary downloadable archive:
+Primary v2.1.0 downloadable archive:
 
 ```text
 Shawn-Calvin-Snelling-AXEZENT-AI-OPAC018-Green-Schur-Bridge-External-Review-v2.1.0-GITHUB-ROOT-UPLOAD.zip
 ```
 
-Published ZIP SHA-256:
+Published v2.1.0 ZIP SHA-256:
 
 ```text
 dc0c97c04265f9d96eddf4024d2c2a75999d7708d1e9c962ddb1b2c13117f7ef
 ```
+
+v2.1.1 is a repository-polish release. GitHub provides automatic source archives for v2.1.1.
+
+---
+
+## Project Governance
+
+This repository includes:
+
+| File | Purpose |
+|---|---|
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution and review guidance |
+| [`SECURITY.md`](SECURITY.md) | Security and responsible disclosure policy |
+| [`.github/pull_request_template.md`](.github/pull_request_template.md) | Pull request template |
+| [`.github/ISSUE_TEMPLATE/mathematical-review.yml`](.github/ISSUE_TEMPLATE/mathematical-review.yml) | Mathematical review issue template |
+| [`.github/ISSUE_TEMPLATE/documentation.yml`](.github/ISSUE_TEMPLATE/documentation.yml) | Documentation issue template |
+| [`.github/ISSUE_TEMPLATE/reproducibility-bug.yml`](.github/ISSUE_TEMPLATE/reproducibility-bug.yml) | Reproducibility bug issue template |
 
 ---
 
@@ -298,23 +321,22 @@ Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge is an external-re
 ### Current baseline
 
 ```text
-v2.1.0 — External-review repository package
+v2.1.1 — Repository polish and reviewer navigation
 ```
 
-### Planned maintenance release
+### Next maintenance target
 
 ```text
-v2.1.1 — Repository polish and manifest refresh
+v2.1.2 — Manifest refresh and CI release-integrity restoration
 ```
 
-Planned v2.1.1 tasks:
+Potential v2.1.2 tasks:
 
-- improve repository landing page,
-- refresh manifest and SHA-256 receipts,
-- restore manifest verification in CI,
-- improve GitHub Pages landing page,
-- add contribution and issue templates if needed,
-- verify all internal links.
+- regenerate release manifest,
+- regenerate SHA-256 receipts,
+- restore manifest verification in GitHub Actions,
+- check all internal links,
+- confirm Pages and release links.
 
 ### Future review-focused release
 
