@@ -1,0 +1,81 @@
+name: Reproducibility or software bug
+description: Report failed commands, test failures, CI problems, manifest issues, or reproducibility problems.
+title: "Repro: "
+labels:
+  - bug
+  - reproducibility
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the reproducibility of the OPAC-018 Green-Schur Bridge package.
+
+        Use this template for failed commands, pytest failures, GitHub Actions failures, manifest problems, SHA-256 mismatches, or missing files.
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or workflow that failed
+      description: Paste the command or GitHub Actions step that failed.
+      placeholder: "Example: python verify_all.py, python -m pytest tests/ -q, python verify_manifest.py"
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output
+      description: Paste the relevant error log or final 20-40 lines of output.
+      render: shell
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Problem category
+      options:
+        - Python audit failure
+        - Pytest failure
+        - GitHub Actions failure
+        - Manifest mismatch
+        - SHA-256 mismatch
+        - Missing file
+        - SageMath issue
+        - Documentation command mismatch
+        - Other reproducibility issue
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version, or GitHub Actions runner.
+      placeholder: "Example: Ubuntu latest, Python 3.11, Windows 11 Python 3.12"
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Any extra details that may help reproduce or fix the issue.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: truth_boundary
+    attributes:
+      label: Truth-boundary acknowledgement
+      options:
+        - label: I understand this repository is marked SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING.
+          required: true
