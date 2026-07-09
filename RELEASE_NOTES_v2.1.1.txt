@@ -1,0 +1,78 @@
+Shawn Calvin Snelling / AXEZENT AI
+OPAC-018 Green-Schur Bridge
+External-Review Package v2.1.1
+
+Status:
+SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING
+
+Release Type:
+Repository polish and reviewer-navigation maintenance release.
+
+Summary:
+v2.1.1 improves the public repository presentation, reviewer workflow, contribution pathway, GitHub Pages landing page, issue templates, pull request template, and project governance files.
+
+This release does not change the mathematical claim, proof scope, verification formulas, or theorem status from v2.1.0.
+
+Major Updates:
+
+1. README Upgrade
+- Added professional GitHub badges.
+- Added clickable reviewer navigation.
+- Added release package and SHA-256 information.
+- Added clearer repository structure tables.
+- Added explicit truth-boundary language.
+- Added roadmap and maintenance-release plan.
+
+2. GitHub Pages Landing Page
+- Replaced the basic index.html with a public project homepage.
+- Added direct links to the repository, release, review PDF, and reviewer starting files.
+- Added release ZIP SHA-256 information.
+- Added clear project-status and truth-boundary sections.
+
+3. Contribution Guide
+- Added CONTRIBUTING.md.
+- Added contribution rules for documentation, proof review, examples, tests, and reproducibility.
+- Added instructions for preserving the external-review truth boundary.
+
+4. Security Policy
+- Added SECURITY.md.
+- Defined security scope for scripts, workflows, release artifacts, manifest checks, and reproducibility risks.
+- Clarified what should be treated as a normal review issue instead of a security issue.
+
+5. Issue Templates
+- Added mathematical review issue template.
+- Added documentation improvement issue template.
+- Added reproducibility/software bug issue template.
+
+6. Pull Request Template
+- Added structured pull request template.
+- Added truth-boundary checklist.
+- Added verification checklist.
+- Added manifest and receipt impact checklist.
+
+7. GitHub Pages Setup Documentation
+- Added docs/GITHUB_PAGES_SETUP.md.
+- Documented how to enable GitHub Pages from the main branch root.
+- Added expected public site URL:
+  https://shawncalvinsnelling.github.io/axezent-opac018-green-schur-bridge/
+
+Verification:
+The GitHub Actions proof-audit workflow remains green after the v2.1.1 polish updates.
+
+Core CI commands:
+python -m compileall -q .
+python pure_python_exact_audit.py
+python counterexample_stress_test.py
+python verify_all.py
+python -m pytest tests/ -q
+
+Truth Boundary:
+This release remains a solution-candidate external-review package.
+Independent mathematical review remains pending.
+The software verifies encoded formulas, receipts, and consistency conditions, but does not replace expert peer review.
+
+Recommended Next Maintenance Work:
+- Regenerate release manifest and SHA-256 receipts.
+- Restore manifest verification into GitHub Actions.
+- Check all internal links.
+- Cut a later v2.1.2 or v2.2.0 release after manifest refresh and/or reviewer feedback.
