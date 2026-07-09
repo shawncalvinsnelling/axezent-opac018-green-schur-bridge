@@ -188,6 +188,16 @@
       color: var(--muted);
     }
 
+    .good {
+      color: var(--ok);
+      font-weight: 700;
+    }
+
+    .warn {
+      color: var(--warn);
+      font-weight: 700;
+    }
+
     .footer {
       margin-top: 34px;
       color: var(--muted);
@@ -216,6 +226,7 @@
         <span class="pill">AXEZENT AI Research Lab</span>
         <span class="pill">OPAC-018</span>
         <span class="pill">External Review Package</span>
+        <span class="pill">v2.1.2</span>
       </div>
 
       <h1>OPAC-018 Green-Schur Bridge</h1>
@@ -223,7 +234,7 @@
       <p class="subtitle">
         A reviewer-facing research package containing a solution-candidate manuscript,
         exact rational verification tools, worked examples, deterministic receipts,
-        and GitHub Actions continuous integration.
+        release-integrity checks, and GitHub Actions continuous integration.
       </p>
 
       <div class="status">
@@ -232,7 +243,7 @@
 
       <div class="actions">
         <a class="button primary" href="https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge">View Repository</a>
-        <a class="button" href="https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.0">Download v2.1.0 Release</a>
+        <a class="button" href="https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.2">Latest Release v2.1.2</a>
         <a class="button" href="START_REVIEW_HERE.md">Start Review</a>
         <a class="button" href="paper/OPAC018-Green-Schur-Bridge-External-Review-v2_1_0.pdf">Open Review PDF</a>
       </div>
@@ -253,10 +264,10 @@
       </article>
 
       <article class="card">
-        <h2>Release</h2>
-        <p><strong>Current release:</strong> v2.1.0</p>
-        <p><strong>Type:</strong> External-review package</p>
-        <p><strong>CI:</strong> Enabled</p>
+        <h2>Current Release</h2>
+        <p><strong>Latest release:</strong> <span class="good">v2.1.2</span></p>
+        <p><strong>Type:</strong> Manifest refresh and CI release-integrity restoration</p>
+        <p><strong>CI:</strong> Proof-audit workflow enabled</p>
       </article>
 
       <article class="card">
@@ -270,7 +281,10 @@
       <article class="card">
         <h2>Verification</h2>
         <p>
-          The included software checks encoded formulas, boundaries, receipts, and consistency conditions.
+          The included software checks encoded formulas, boundaries, receipts, manifests,
+          SHA-256 records, and consistency conditions.
+        </p>
+        <p class="muted">
           It does not replace expert mathematical review.
         </p>
       </article>
@@ -283,6 +297,7 @@
           <li>Worked examples</li>
           <li>Negative-control tests</li>
           <li>Release receipts</li>
+          <li>Manifest integrity checks</li>
         </ul>
       </article>
 
@@ -306,17 +321,31 @@
 python pure_python_exact_audit.py
 python counterexample_stress_test.py
 python verify_all.py
-python -m pytest tests/ -q</pre>
+python -m pytest tests/ -q
+python verify_manifest.py
+python build_sha_manifest.py --check</pre>
+      </article>
+
+      <article class="card full">
+        <h2>Release Sequence</h2>
+        <ul>
+          <li><strong>v2.1.0</strong> — External-review root-upload package</li>
+          <li><strong>v2.1.1</strong> — Repository polish and reviewer navigation</li>
+          <li><strong>v2.1.2</strong> — Manifest refresh and CI release-integrity restoration</li>
+        </ul>
       </article>
 
       <article class="card full">
         <h2>Release ZIP Integrity</h2>
         <p>
-          Primary downloadable archive:
+          The original v2.1.0 external-review root-upload archive remains available on the v2.1.0 release page.
         </p>
         <pre>Shawn-Calvin-Snelling-AXEZENT-AI-OPAC018-Green-Schur-Bridge-External-Review-v2.1.0-GITHUB-ROOT-UPLOAD.zip</pre>
-        <p>Published SHA-256:</p>
+        <p>Published v2.1.0 ZIP SHA-256:</p>
         <p class="hash">dc0c97c04265f9d96eddf4024d2c2a75999d7708d1e9c962ddb1b2c13117f7ef</p>
+        <p class="muted">
+          GitHub automatically provides source archives for v2.1.1 and v2.1.2.
+        </p>
       </article>
 
       <article class="card full">
@@ -326,10 +355,22 @@ python -m pytest tests/ -q</pre>
           <li><code>docs/</code> — reviewer documentation and proof-risk notes</li>
           <li><code>examples/</code> — hand-checkable examples</li>
           <li><code>paper/</code> — manuscript and review PDFs</li>
-          <li><code>receipts/</code> — deterministic audit receipts</li>
+          <li><code>receipts/</code> — deterministic audit receipts and SHA-256 manifest</li>
           <li><code>sage/</code> — SageMath audit assets</li>
           <li><code>tests/</code> — automated regression tests</li>
         </ul>
+      </article>
+
+      <article class="card full">
+        <h2>Final Status Statement</h2>
+        <p>
+          <strong>SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING</strong>
+        </p>
+        <p>
+          This repository is a structured, reproducible, external-review research package.
+          The software checks encoded formulas and reproducibility conditions using exact arithmetic.
+          The mathematical claims remain subject to independent expert review.
+        </p>
       </article>
     </section>
 
