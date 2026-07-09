@@ -10,7 +10,7 @@
 
 **Author:** Shawn Calvin Snelling  
 **Research label:** AXEZENT AI Research Lab  
-**Current release:** [`v2.1.1`](https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.1)  
+**Current release:** [`v2.1.2`](https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.2)  
 **Status:** **SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING**
 
 ---
@@ -36,6 +36,8 @@ through a reviewer-facing package that combines:
 - release packaging,
 - GitHub Pages reviewer navigation,
 - contribution and issue templates,
+- manifest integrity checks,
+- SHA-256 release-integrity checking,
 - and documentation designed for independent mathematical review.
 
 This repository is intended to be the single public home for the OPAC-018 Green-Schur Bridge package.
@@ -57,7 +59,7 @@ It does **not** claim:
 - resolution of unrelated mathematical problems,
 - or replacement of expert peer review.
 
-The included software checks the formulas, bounds, receipts, and consistency rules encoded in this repository.  
+The included software checks the formulas, bounds, receipts, manifests, and consistency rules encoded in this repository.  
 It is not a substitute for independent mathematical review.
 
 ---
@@ -68,7 +70,7 @@ It is not a substitute for independent mathematical review.
 - [Truth Boundary](#truth-boundary)
 - [Reviewer Quick Start](#reviewer-quick-start)
 - [Run the Verification Suite](#run-the-verification-suite)
-- [Optional Release-Integrity Checks](#optional-release-integrity-checks)
+- [Release-Integrity Checks](#release-integrity-checks)
 - [Repository Structure](#repository-structure)
 - [Core Verification Programs](#core-verification-programs)
 - [Manuscript and Review Files](#manuscript-and-review-files)
@@ -117,9 +119,11 @@ python pure_python_exact_audit.py
 python counterexample_stress_test.py
 python verify_all.py
 python -m pytest tests/ -q
+python verify_manifest.py
+python build_sha_manifest.py --check
 ```
 
-These are the same core checks used by the current GitHub Actions workflow.
+These are the same core checks now used by the restored GitHub Actions proof-audit workflow.
 
 The workflow is located at:
 
@@ -129,18 +133,24 @@ The workflow is located at:
 
 ---
 
-## Optional Release-Integrity Checks
+## Release-Integrity Checks
 
-The repository includes manifest and SHA-256 tooling:
+As of `v2.1.2`, manifest verification and SHA-256 checking have been restored into the main CI workflow.
+
+The repository includes:
 
 ```bash
 python verify_manifest.py
 python build_sha_manifest.py --check
 ```
 
-During the initial GitHub upload and CI setup, the workflow was simplified so the manifest check does not block CI while repository files are being finalized.
+The manifest refresh workflow is located at:
 
-The manifest should be regenerated before a future maintenance release that restores manifest verification into CI.
+```text
+.github/workflows/manifest-refresh.yml
+```
+
+It can be run manually when repository files change and the release-integrity receipts need to be regenerated.
 
 ---
 
@@ -240,14 +250,22 @@ Important files include:
 Latest release:
 
 ```text
-v2.1.1
+v2.1.2
 ```
 
 Latest release page:
 
 ```text
-https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.1
+https://github.com/shawncalvinsnelling/axezent-opac018-green-schur-bridge/releases/tag/v2.1.2
 ```
+
+Release sequence:
+
+| Release | Purpose |
+|---|---|
+| `v2.1.0` | External-review root-upload package |
+| `v2.1.1` | Repository polish and reviewer navigation |
+| `v2.1.2` | Manifest refresh and CI release-integrity restoration |
 
 The original v2.1.0 external-review root-upload archive remains available on the v2.1.0 release page:
 
@@ -267,7 +285,7 @@ Published v2.1.0 ZIP SHA-256:
 dc0c97c04265f9d96eddf4024d2c2a75999d7708d1e9c962ddb1b2c13117f7ef
 ```
 
-v2.1.1 is a repository-polish release. GitHub provides automatic source archives for v2.1.1.
+GitHub provides automatic source archives for v2.1.1 and v2.1.2.
 
 ---
 
@@ -321,24 +339,10 @@ Shawn Calvin Snelling / AXEZENT AI OPAC-018 Green-Schur Bridge is an external-re
 ### Current baseline
 
 ```text
-v2.1.1 — Repository polish and reviewer navigation
-```
-
-### Next maintenance target
-
-```text
 v2.1.2 — Manifest refresh and CI release-integrity restoration
 ```
 
-Potential v2.1.2 tasks:
-
-- regenerate release manifest,
-- regenerate SHA-256 receipts,
-- restore manifest verification in GitHub Actions,
-- check all internal links,
-- confirm Pages and release links.
-
-### Future review-focused release
+### Next review-focused target
 
 ```text
 v2.2.0 — Reviewer feedback integration
@@ -351,6 +355,19 @@ Potential v2.2.0 tasks:
 - add more worked examples,
 - expand literature comparison,
 - refine theorem dependency documentation.
+
+### Future maintenance target
+
+```text
+v2.2.1 — Minor fixes after external review
+```
+
+Potential v2.2.1 tasks:
+
+- typo fixes,
+- link fixes,
+- documentation cleanup,
+- receipt refresh if needed.
 
 ---
 
