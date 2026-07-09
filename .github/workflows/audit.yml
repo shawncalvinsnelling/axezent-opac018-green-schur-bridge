@@ -25,16 +25,29 @@ jobs:
           python -m pip install pytest
 
       - name: Compile source
-        run: python -m compileall -q .
+        run: |
+          python -m compileall -q .
 
       - name: Run exact audit
-        run: python pure_python_exact_audit.py
+        run: |
+          python pure_python_exact_audit.py
 
       - name: Run stress test
-        run: python counterexample_stress_test.py
+        run: |
+          python counterexample_stress_test.py
 
       - name: Run verifier
-        run: python verify_all.py
+        run: |
+          python verify_all.py
 
       - name: Run tests
-        run: python -m pytest tests/ -q
+        run: |
+          python -m pytest tests/ -q
+
+      - name: Verify release manifest
+        run: |
+          python verify_manifest.py
+
+      - name: Check SHA-256 manifest
+        run: |
+          python build_sha_manifest.py --check
