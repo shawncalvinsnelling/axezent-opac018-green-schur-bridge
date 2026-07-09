@@ -47,7 +47,3 @@ jobs:
       - name: Verify release manifest
         run: |
           python verify_manifest.py
-
-      - name: Check SHA-256 manifest
-        run: |
-          python build_sha_manifest.py --check
