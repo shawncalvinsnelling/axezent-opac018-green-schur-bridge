@@ -1,0 +1,63 @@
+name: Mathematical review question
+description: Ask a proof, theorem, assumption, or literature-review question.
+title: "Review: "
+labels:
+  - mathematical-review
+  - external-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reviewing the OPAC-018 Green-Schur Bridge package.
+
+        Please use this template for questions about the manuscript, proof dependencies, assumptions, examples, or mathematical scope.
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which file, theorem, lemma, equation, example, or section is this about?
+      placeholder: "Example: paper/main.tex, Lemma 2, docs/FORMAL_ASSUMPTIONS.md, examples/example_C6.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Review topic
+      options:
+        - Definition or notation
+        - Lemma or theorem proof
+        - Dependency gap
+        - Literature comparison
+        - Scope or assumptions
+        - Counterexample concern
+        - Worked example
+        - Other mathematical review
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or concern
+      description: Describe the issue clearly and precisely.
+      placeholder: "What needs clarification, correction, proof, citation, or independent verification?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix or reference
+      description: Optional. Include a proposed correction, citation, or reference.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: truth_boundary
+    attributes:
+      label: Truth-boundary acknowledgement
+      options:
+        - label: I understand this repository is marked SOLUTION-CANDIDATE / EXTERNAL REVIEW PENDING.
+          required: true
