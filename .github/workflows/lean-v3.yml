@@ -1,0 +1,42 @@
+name: OPAC-018 v3 Lean Source Closure
+
+on:
+  push:
+    branches:
+      - v3-kernel-source-closure
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lean-source-closure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Install Lean
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          auto-config: "false"
+          build: "false"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+          use-github-cache: "true"
+
+      - name: Update dependencies
+        run: lake update
+
+      - name: Fetch Mathlib cache
+        run: lake exe cache get
+
+      - name: Reject placeholders, local axioms, and source convention regressions
+        run: python -m pytest -q tests/test_no_lean_placeholders.py tests/test_source_interface_regressions.py
+
+      - name: Build complete Lean library
+        run: lake build Opac018UniformProof
+
+      - name: Print strongest theorem axiom dependencies
+        run: lake env lean Opac018UniformProof/AxiomAudit.lean

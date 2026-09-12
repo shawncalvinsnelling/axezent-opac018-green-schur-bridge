@@ -1,0 +1,14 @@
+name = "opac018"
+defaultTargets = ["Opac018UniformProof"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "aa21122bf6e385a6828b017c7f22cdfdedaee6a9"
+
+[[lean_lib]]
+name = "Opac018UniformProof"
