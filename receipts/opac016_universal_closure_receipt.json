@@ -1,0 +1,86 @@
+{
+  "theorem_id": "AXZ-OPAC-016",
+  "title": "Type-C Signed-Component Exact Kappa Lemma — Universal Finite-Rank Closure",
+  "decision": "PROVED_EXACT",
+  "scope": {
+    "root_system": "C_n",
+    "ranks": "all finite n >= 1",
+    "subspaces": "all nonzero root-spanned U",
+    "formula": "kappa=1 if no balanced component; otherwise max(1,2-2/b1)",
+    "strict_bound": "kappa(C_n,U)<2"
+  },
+  "aggregate_math_checks": {
+    "exhaustive_nonzero_subspaces_C2_through_C5": 790,
+    "projected_root_checks_total": 76628,
+    "random_subspace_cases": 300,
+    "independent_lp_random_cases": 60,
+    "extreme_block_sizes_checked": 10002,
+    "formula_mismatches_total": 0
+  },
+  "executed_closure_evidence": {
+    "opac16_exact_replay_C2_C4": {
+      "nonzero_subspaces": 143,
+      "projected_root_lp_checks": 4134,
+      "mismatches": 0
+    },
+    "exhaustive_C5": {
+      "rank": 5,
+      "nonzero": 647,
+      "root_projection_checks": 32350,
+      "mismatches": [],
+      "distribution": {
+        "1": 311,
+        "4/3": 240,
+        "3/2": 80,
+        "8/5": 16
+      },
+      "status": "PASS"
+    },
+    "random_exact_high_rank": {
+      "random_cases": 300,
+      "root_projection_checks": 34728,
+      "mismatches": [],
+      "c1_edge_case": true,
+      "extreme_block_sizes_checked": 10002,
+      "margin_failures": [],
+      "status": "PASS"
+    },
+    "independent_lp_high_rank": {
+      "cases": 60,
+      "projected_root_lp_checks": 5416,
+      "mismatches": [],
+      "status": "PASS"
+    },
+    "repository_core_audit": {
+      "exact_audit_passed": true,
+      "negative_controls_passed": true,
+      "master_audit_passed": true,
+      "math_receipt_pytest_subset": "9 passed"
+    }
+  },
+  "current_public_repo_baseline": {
+    "repository": "shawncalvinsnelling/axezent-opac018-green-schur-bridge",
+    "baseline_head_commit": "1129799f69b136923f347c611644377556a616dc",
+    "release": "v2.1.2",
+    "last_full_ci_at_baseline_head": {
+      "run_id": 29043321837,
+      "conclusion": "success"
+    },
+    "manifest_receipt_at_baseline_head": {
+      "checked": 76,
+      "passed": true,
+      "missing": [],
+      "mismatches": []
+    }
+  },
+  "not_promoted_to": [
+    "FORMALLY_VERIFIED",
+    "EXTERNALLY_REPLICATED"
+  ],
+  "not_claimed": [
+    "global OPAC-018 solved",
+    "publication-level novelty established",
+    "journal/referee acceptance"
+  ],
+  "truth_boundary": "The symbolic proof in OPAC016_PROVED_EXACT.md is the proof-grade object. Computation is corroborative and reproducibility evidence."
+}
