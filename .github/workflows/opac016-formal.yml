@@ -1,0 +1,28 @@
+name: OPAC-016 Lean Arithmetic Kernel
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'opac016/formal/**'
+      - '.github/workflows/opac016-formal.yml'
+  push:
+    branches: [ main ]
+    paths:
+      - 'opac016/formal/**'
+      - '.github/workflows/opac016-formal.yml'
+  workflow_dispatch:
+
+jobs:
+  lean-arithmetic-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build partial formal arithmetic kernel
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: opac016/formal
+          build: true
+          test: false
+          nanoda: true
+          nanoda-allow-sorry: false
