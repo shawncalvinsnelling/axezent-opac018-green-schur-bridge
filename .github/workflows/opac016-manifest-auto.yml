@@ -1,0 +1,44 @@
+name: OPAC-016 Manifest Auto-Refresh
+
+on:
+  push:
+    paths:
+      - 'opac016/**'
+      - '.github/workflows/opac016-formal.yml'
+      - '.github/workflows/opac016-manifest-auto.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-opac016-manifest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Regenerate repository SHA-256 manifest
+        run: python build_sha_manifest.py
+
+      - name: Verify regenerated manifest
+        run: python verify_manifest.py
+
+      - name: Commit refreshed manifest receipts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add receipts/SHA256SUMS.txt receipts/manifest_verification_results.json
+          if git diff --cached --quiet; then
+            echo "No manifest changes."
+          else
+            git commit -m "receipts: refresh OPAC-016 integrity manifest"
+            git push
+          fi
